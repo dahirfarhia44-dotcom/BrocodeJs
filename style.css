@@ -1,0 +1,25 @@
+#counterlebel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family:'Times New Roman', Times, serif;
+   
+}
+
+#btncountainer{
+    text-align: center;
+}
+.buttons{
+    font-size: 10px;
+    padding: 5px 15px;
+    margin: .75px;
+    justify-content: center;
+    background-color: #b2deeb;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: abackground-color 0.3s ease;
+}
+
+.buttons:hover{
+    background-color: #427aea;
+}
