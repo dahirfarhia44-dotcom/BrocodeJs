@@ -244,3 +244,74 @@ switch(day){
 }
 
 console.log(`Today is ${dayName}.`);
+//scope
+//global scope - declared outside of any function or block
+//local scope - declared inside a function or block
+
+let globalVar = "I am a global variable."; //because it is declared outside of any function or block, it has global scope
+//while below variable is declared inside a function, it has local scope
+function myFunc() {
+  const myVar = 50;
+
+  return myVar * 2;
+}
+//myFunc(); since we use console.log outside the function, we dont need to call the function here
+/*let result = myFunc();
+alert(result);
+document.write(result);*/
+
+//console.log is placed outside the function 
+console.log(myFunc());
+
+function function1() {
+    let x = 10;
+    x +=5;
+    console.log(x);
+}
+
+function function1() {
+    let x = 6;
+    x +=5;
+    console.log(x);
+}
+function1();
+
+function bankAccount() {
+  secretPassword = "il0v3pupp135";
+
+  return "bankAccount() function invoked!";
+}
+
+console.log(bankAccount());
+
+function bankAccount() {
+let balance = 1000; //global scope
+}
+function deposit() {
+    balance += 500; //accessing global variable
+}
+
+function withdraw() {
+    balance -= 700; //accessing global variable
+}
+
+deposit();
+withdraw();
+console.log(balance);
+
+//best practice to use let and const to declare variables to avoid accidental global variables  
+let balance = 1000; //global scope
+
+function deposit(balance) {
+    return balance - 500; //accessing global variable
+}
+
+function withdraw(balance) {
+    return balance + 700; //accessing global variable
+}
+
+balance = deposit(balance);
+balance = withdraw(balance);
+console.log(balance);
+
+//understand and fix the errors in the code above
